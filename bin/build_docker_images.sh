@@ -34,5 +34,6 @@ time docker build -t clipper/python-closure-container -f ./PyClosureContainerDoc
 time docker build -t clipper/pyspark-container -f ./PySparkContainerDockerfile ./
 time docker build -t clipper/sklearn_cifar_container -f ./SklearnCifarDockerfile ./
 time docker build -t clipper/tf_cifar_container -f ./TensorFlowCifarDockerfile ./
-time docker build -t clipper/r_python_container -f ./RPythonDockerfile ./
+# TODO: uncomment
+# time docker build -t clipper/r_python_container -f ./RPythonDockerfile ./
 cd -
