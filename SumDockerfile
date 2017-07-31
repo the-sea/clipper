@@ -1,4 +1,4 @@
-FROM clipper/py-rpc:latest
+FROM clipper/py-rpc:0.2-rc1
 
 COPY containers/python/sum_container.py /container/
 

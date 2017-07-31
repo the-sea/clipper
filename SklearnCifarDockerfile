@@ -1,4 +1,4 @@
-FROM clipper/py-rpc:latest
+FROM clipper/py-rpc:0.2-rc1
 
 MAINTAINER Dan Crankshaw <dscrankshaw@gmail.com>
 
