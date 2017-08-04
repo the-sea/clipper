@@ -168,7 +168,7 @@ class ClipperManagerTestCaseShort(unittest.TestCase):
         version = "v1"
         container_name = "clipper/noop-container"
         input_type = "doubles"
-        self.clipper_conn.deploy_model(model_name,
+        self.clipper_conn.build_and_deploy_model(model_name,
                                        version, input_type,
                                        fake_model_data, container_name)
         model_info = self.clipper_conn.get_model_info(model_name, version)
@@ -185,7 +185,7 @@ class ClipperManagerTestCaseShort(unittest.TestCase):
         version = "v1"
         container_name = "clipper/noop-container"
         input_type = "doubles"
-        self.clipper_conn.deploy_model(model_name,
+        self.clipper_conn.build_and_deploy_model(model_name,
                                        version, input_type,
                                        fake_model_data, container_name)
 
@@ -204,7 +204,7 @@ class ClipperManagerTestCaseShort(unittest.TestCase):
         container_name = "clipper/noop-container"
         input_type = "doubles"
         model_name = "remove_inactive_test_model"
-        self.clipper_conn.deploy_model(
+        self.clipper_conn.build_and_deploy_model(
             model_name,
             1,
             input_type,
@@ -216,7 +216,7 @@ class ClipperManagerTestCaseShort(unittest.TestCase):
             filters={"ancestor": container_name})
         self.assertEqual(len(containers), 2)
 
-        self.clipper_conn.deploy_model(
+        self.clipper_conn.build_and_deploy_model(
             model_name,
             2,
             input_type,
@@ -319,7 +319,7 @@ class ClipperManagerTestCaseLong(unittest.TestCase):
     def test_deployed_model_queried_successfully(self):
         model_version = 1
         container_name = "clipper/noop-container"
-        self.clipper_conn.deploy_model(self.model_name_2, model_version,
+        self.clipper_conn.build_and_deploy_model(self.model_name_2, model_version,
                                        self.input_type, fake_model_data,
                                        container_name)
 
